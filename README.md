@@ -33,8 +33,20 @@ Things you may want to cover:
 
 ### Association
 - has_many :posts
+- has_many :jenres
 - has_many :likes
   
+
+## jenres-table
+
+|Column|Type|Options|
+|------|----|-------|
+|subject|text|null: false|
+|user|references|null: false, foreign_key: true|
+
+### Association
+- has_many :posts
+- belongs_to :user
 
 ## posts-table
 
@@ -43,35 +55,14 @@ Things you may want to cover:
 |title|text|null: false|
 |content|text|null: false|
 |image|text||
+|jenre|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 - hasmany :likes
-- hasmany :posts_jenres
-- hasmany :jenres, through: :posts_jenres
-
-## posts_jenres-table
-
-|Column|Type|Options|
-|------|----|-------|
-|post|references|null: false, foreign_key: true|
-|jenre|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :post
 - belongs_to :jenre
 
-
-## jenres-table
-
-|Column|Type|Options|
-|------|----|-------|
-|subject|text|null: false|
-
-### Association
-- hasmany :posts_jenres
-- hasmany :posts, through: :posts_jenres
 
 ## likes-table
 
