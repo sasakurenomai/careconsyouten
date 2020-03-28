@@ -1,0 +1,15 @@
+.wrapper
+  .wrapper__message
+  -  @posts.each do |post|
+    .wrapper__message__update
+      =  post.updated_at
+    .wrapper__message__title
+      =  post.title
+    .wrapper__message__image
+      =  post.image    
+    .wrapper__message__show
+      =  link_to jenre_post_path(post.jenre_id, post.id) do
+        %p  詳 細
+  .wrapper__message__new
+    =  link_to new_jenre_post_path(@post_jenre_id) do
+      %p  新 規 投 稿

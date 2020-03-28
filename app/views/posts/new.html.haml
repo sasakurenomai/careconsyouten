@@ -1,0 +1,6 @@
+.wrapper
+  =  form_for [@jenre,@post] do |f|
+    =  f.text_area :title, placeholder: '題 目'
+    =  f.text_area :content, placeholder: '内 容'
+    =  f.text_area :image, placeholder: '写 真'
+    =  f.submit '送 信'

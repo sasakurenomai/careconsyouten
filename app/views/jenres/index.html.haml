@@ -1,0 +1,35 @@
+.wrapper
+  .header
+    %p  t i t l e
+  .main
+    .link
+      %p  l i n k
+    .jenres
+      .jenres__block--left
+        .jenres__block--left__top
+          =  link_to  jenre_path(@toiret.id)  do
+            -
+        .jenres__block--left__middle
+          -#=  link_to do
+        .jenres__block--left__bottom
+          -#=  link_to do
+      .jenres__block--center
+        .jenres__block--center__top
+        .jenres__block--center__middle
+        .jenres__block--center__bottom
+      .jenres__block--right
+        .jenres__block--right__top
+        .jenres__block--right__middle
+        .jenres__block--right__bottom
+
+    .character
+    .message
+      .message__content
+        いらっしゃい
+        %br
+        %br
+        見たい内容を左から
+        %br
+        %br
+        選択して入ってくれ 
+        
