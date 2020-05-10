@@ -76,6 +76,6 @@ Things you may want to cover:
 - belongs_to :post
 - belongs_to :user
 
-
+  
   
 
