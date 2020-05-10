@@ -22,6 +22,8 @@
 
 ![carecon_index](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_index.png)
 
+![carecon_show](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_show.png)
+
 ![carecon_post](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_post.png)
 
 ## Features
