@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper1{
+  height: 100vh;
+}
+
+.header1{
+  height: 100px;
+  width: 100vw;
+  background-color: red;
+	background-size: 10px 10px;
+	background-image:
+	linear-gradient(45deg,  black 25%, gray 25%, transparent 25%,
+  transparent 75%, gray 75%, black 75%),
+	linear-gradient(-45deg, black 25%, gray 25%, transparent 25%,
+	transparent 75%, gray 75%, black 75%);
+
+  p{
+    height: 100px;
+    width: 800px;
+    color: white;
+    margin: 0 auto;
+    font-size: 80px;
+    line-height: 1.2;
+    text-align: center;
+    font-family: serif;
+  }
+}
+
+.main1{
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background-color: #DDDDDD; 
+  display: flex;
+  flex-flow: row-reverse;
+
+
+  .link1{
+    height: 100px;
+    width: 200px;
+    margin-top: 0px; 
+    margin-left: 0px;
+    background-color: rgba($color: #008080, $alpha: 0.5);
+    position: relative;
+    a{
+      display: inline-block;
+      min-width: 100%;
+      min-height: 100%;
+      p{
+        height: 80px;
+        width: 150px;
+        font-size: 35px;
+        font-family: serif;
+        text-align: center;
+        line-height: 2.0;
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        color: white;
+      }
+    }
+  }
+}
+
+.message1{
+  height:100px;
+  width:200px;
+  background-color: rgba($color: #000099, $alpha: 0.5);
+  margin: 0;
+  position: relative;
+    
+  a{
+    display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    p{
+      font-family: serif;
+      font-size: 35px;
+      line-height: 2.0;
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      height: 80px;
+      width: 150px;
+      margin: 0 auto;
+      color: white;
+    }
+  }
+}
+
+.out-link{
+  height: 80px;
+  width: 800px;
+  position: absolute;
+  top: 115px;
+  left: 100px;
+  
+  a{
+    text-decoration: none;
+  }
+  .out-image{
+    border: 2px solid brown;
+    max-height: 80px;
+    max-width: 180px;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+
+.character2{
+
+  height: 140px;
+  width: 110px;
+  background-image: url(作業員提案2.png);
+  position: absolute;
+  top: 100px;
+  left: 550px;
+}
+
+.fukidashi2{
+  height: 140px;
+  width: 350px;
+  background-image:url(fukidashi6.png);
+  transform: scale(-1, 1);
+  position: absolute;
+  top: 100px;
+  left: 660px;
+}
+
+.comment1{
+  height: 130px;
+  width: 340px;
+  font-size: 20px;
+  line-height: 1.2;
+  position: absolute;
+  top: 130px;
+  left: 740px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.urinal{
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 90px;
+
+  &__block--left{
+    
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(ロータンク.jpg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(ハイタンク.jpg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(ワンピース型.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__block--center{
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(ローシルエット.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(ハイシルエット.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(壁掛.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+  
+  &__block--right{
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(ストール.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(小便器FV.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(小便器センサー.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+.urinal2{
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 725px;
+
+  &__block--left{
+    
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(ウォシュレット.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(ウォシュレットリモコン.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器レバーハンドル.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__block--center{
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器給水管.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器洗浄管.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器スパッド管.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+  
+  &__block--right{
+    &__top{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器ボールタップ横型.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__middle{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器フロートバルブ.jpeg);
+      opacity: 0.8;
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+    &__bottom{
+      width: 212px;
+      height: 200px;
+      background-image: url(大便器FV.jpeg);
+      border: solid 0.5px;
+
+      a{
+        display: block;
+        width: 212px;
+        height: 200px;
+      }
+    }
+  }
+}
+

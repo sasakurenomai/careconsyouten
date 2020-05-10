@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper1-1{
+  height: 100vh;
+}
+
+.header1-1{
+  height: 100px;
+  width: 100vw;
+  background-color: red;
+	background-size: 10px 10px;
+	background-image:
+	linear-gradient(45deg,  black 25%, gray 25%, transparent 25%,
+  transparent 75%, gray 75%, black 75%),
+	linear-gradient(-45deg, black 25%, gray 25%, transparent 25%,
+	transparent 75%, gray 75%, black 75%);
+  position: relative;
+  p{
+    height: 100px;
+    width: 800px;
+    color: white;
+    margin: 0 auto;
+    font-size: 80px;
+    line-height: 1.2;
+    text-align: center;
+    font-family: serif;
+  }
+}
+
+.main1-1{
+  height: 1000px;
+  width: 100vw;
+  background-color: #DDDDDD; 
+  
+  .link1-1{
+    height: 100px;
+    width: 200px;
+    margin: 0 0 auto auto;
+    background-color: rgba($color: #008080, $alpha: 0.5);
+    position: relative;
+    a{
+      display: inline-block;
+      min-width: 100%;
+      min-height: 100%;
+      p{
+        height: 80px;
+        width: 150px;
+        font-size: 35px;
+        font-family: serif;
+        padding-left: 25px;
+        line-height: 2.2;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        color: white;
+      }
+    }
+  }
+}
+
+.character1-1{
+  height: 140px;
+  width: 110px;
+  background-image: url(作業員提案2.png);
+  position: absolute;
+  top: 100px;
+  left: 550px;
+}
+
+.fukidashi1-1{
+  height: 140px;
+  width: 350px;
+  background-image:url(fukidashi6.png);
+  transform: scale(-1, 1);
+  position: absolute;
+  top: 100px;
+  left: 660px;
+}
+
+.comment1-1{
+  height: 130px;
+  width: 340px;
+  font-size: 20px;
+  line-height: 1.2;
+  position: absolute;
+  top: 130px;
+  left: 740px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.block-container{
+  height: 800px;
+  min-width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+
+  .block-container1-1-top{
+    height: 400px;
+    width: 100%;
+    border-bottom: solid 1px black;
+    
+    display: flex;
+    .block-container1-1-top-left{
+      height: 100%;
+      width: 50%;
+      border-right: solid 1px black;
+    }
+    .block-container1-1-top-right{
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  .block-container1-1-bottom{
+    height: 400px;
+    width: 100%;
+    
+    display: flex;
+    .block-container1-1-bottom-left{
+      height: 100%;
+      width: 50%;
+      border-right: solid 1px black;
+    
+    }
+    .block-container1-1-bottom-right{
+      height: 100%;
+      width: 50%;
+    
+    }
+  }
+
+  .image-box1-1{
+    height: 300px;
+    width: 300px;
+    border-right: solid 1px black; 
+    border-bottom: solid 1px black; 
+    background-color: red;
+    position: relative;
+  }
+
+  .image1-1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .number1-1{
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: yellow;
+  }
+
+  .title-box1-1{
+    height: 98px;
+    width: 300px;
+    border-right: solid 1px;
+    background-color: yellowgreen;
+  }
+
+  .title1-1{
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .content-box1-1{
+    height: 398px;
+    width: 418px;
+    background-color: aquamarine;
+    margin-top: -398px;
+    margin-left: 300px;
+  }
+
+  .content1-1{
+    min-height: 100%;
+    min-width: 100%; 
+  }
+}
+
+.urinal-master-box{
+  height: 30px;
+  width: 100px;
+  margin-top: 20px;
+  background-color: orangered;
+  display: flex;
+  justify-content: space-between;
+  .urinal-new{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-left: 5px;
+    color: yellow;
+    
+  }
+  .urinal-edit{
+    font-size: 20px;
+    line-height: 1.4;
+    color: yellow;
+  }
+  .urinal-destroy{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-right: 5px;
+    color: yellow;
+  }
+}
+
+.urinal-master-box-off{
+  height: 30px;
+  width: 100px;
+  margin-top: 20px;
+  background-color: darkblue;
+  display: flex;
+  justify-content: space-between;
+  .urinal-new-off{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-left: 5px;
+    color: white;
+    
+  }
+  .urinal-edit-off{
+    font-size: 20px;
+    line-height: 1.4;
+    color: white;
+  }
+  .urinal-destroy-off{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-right: 5px;
+    color: white;
+  }
+}

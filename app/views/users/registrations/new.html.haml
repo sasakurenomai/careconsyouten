@@ -1,0 +1,27 @@
+.wrapper--a
+  .header--a
+    %p ユーザー >> 新規登録
+
+  = form_for resource, as: resource_name, url: registration_path(resource_name) do |f| 
+    = render "devise/shared/error_messages", resource: resource
+    .field1
+      = f.label :email, class: 'email-label'
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'email-form'
+    
+    .field2
+      = f.label :password, class: 'pass-label'
+      -if @minimum_password_length
+        %p.pass-caution= "#{@minimum_password_length}characters minimum"
+          
+        = f.password_field :password, autocomplete: "new-password", class: 'pass-form'
+
+    .field3
+      = f.label :password_confirmation, class: 'confirm-label'
+      = f.password_field :password_confirmation, autocomplete: "new-password", class: 'confirm-form'
+
+    .actions
+      = render "users/shared/links",class: 'user-change'
+      = f.submit "Sign up", class: 'registration-submit'
+
+  
+    

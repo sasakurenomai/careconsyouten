@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+}
+
+.header{
+  height: 100px;
+  width: 100vw;
+  background-color: #333333;
+	background-size: 10px 10px;
+	background-image:
+	linear-gradient(45deg,  black 25%, gray 25%, transparent 25%,
+  transparent 75%, gray 75%, black 75%),
+	linear-gradient(-45deg, black 25%, gray 25%, transparent 25%,
+	transparent 75%, gray 75%, black 75%);
+
+  p{
+    height: 100px;
+    width: 1000px;
+    color: white;
+    margin: 0 auto;
+    font-size: 80px;
+    text-align: center;
+    font-family: serif;
+  }
+}
+
+.main{
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background-image: url(main.jpg);
+  display: flex;
+  flex-flow: row-reverse;
+
+  .link--box__index{
+    height: 150px;
+    widows: 100vw;
+    display: flex;
+    
+  }
+
+  .sign_up{
+    height: 100px;
+    width:200px;
+    margin: 0 0 auto auto;
+    background-color: rgba($color: #000099, $alpha: 0.5);
+    position: relative;
+    a{
+      display: inline-block;
+      min-width: 100%;
+      min-height: 100%;
+      p{
+        height: 80px;
+        width: 150px;
+        font-size: 35px;
+        font-family: serif;
+        text-align: center;
+        line-height: 2.0;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        color: white;
+      }
+    }
+  }
+
+  .log_in{
+    height:100px;
+    width:200px;
+    background-color: rgba($color: #008080, $alpha: 0.5);
+    margin-top: 0px; 
+    margin-left: 0px;
+    position: relative;
+      
+    a{
+      display: inline-block;
+      min-width: 100%;
+      min-height: 100%;
+      p{
+        font-family: serif;
+        font-size: 35px;
+        text-align: center;
+        line-height: 2.0;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        height: 80px;
+        width: 150px;
+        margin: 0 auto;
+        color: white;
+      }
+    }
+  }
+
+  .log_out{
+    height:100px;
+    width:200px;
+    background-color: rgba($color: #008080, $alpha: 0.5);
+    margin-top: 0px; 
+    margin-left: 0px;
+    position: relative;
+      
+    a{
+      display: inline-block;
+      min-width: 100%;
+      min-height: 100%;
+      p{
+        font-family: serif;
+        font-size: 35px;
+        text-align: center;
+        line-height: 2.0;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        height: 80px;
+        width: 150px;
+        margin: 0 auto;
+        color: white;
+      }
+    }
+  }
+
+
+  
+  .jenres-box{
+    display: flex;
+    position: absolute;
+    top: 250px;
+    left: 160px;
+
+    &__block--left{
+      
+      &__top{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.toilet-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .toilet{
+            display: inline-block;
+            padding-left: 40px;
+            line-height: 1.2;
+            color:red;
+            font-size: 170px;
+          }
+        }
+      }
+      &__middle{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.faucet-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .faucet{
+            display: inline-block;
+            padding-left: 25px;
+            line-height: 1.2;
+            color:red;
+            font-size: 170px;
+          }
+        }
+      }
+      &__bottom{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.bath-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .bath{
+            display: inline-block;
+            padding-left: 25px;
+            line-height: 1.2;
+            color:red;
+            font-size: 170px;
+          }
+        }
+      }
+    }
+
+    &__block--center{
+      &__top{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.bulb-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .bulb{
+            display: inline-block;
+            padding-left: 50px;
+            line-height: 1.2;
+            color:red;
+            font-size: 170px;
+          }
+        }
+      }
+      &__middle{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.plug-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .plug{
+            display: inline-block;
+            padding-left: 45px;
+            line-height: 1.2;
+            color:red;
+            font-size: 170px;
+          }
+        }
+      }
+      &__bottom{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.door-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .door{
+            display: inline-block;
+            padding-left: 10px;
+            line-height: 1.3;
+            color:red;
+            font-size: 150px;
+          }
+        }
+      }
+    }
+    
+    &__block--right{
+      &__top{
+        width: 212px;
+        height: 200px;
+        border: solid 0.5px;
+
+        a.window-link{
+          display: block;
+          width: 212px;
+          height: 200px;
+          background-color: rgba(192,192,192,0.7);
+          .window{
+            display: inline-block;
+            padding-left: 40px;
+            line-height: 1.3;
+            color:red;
+            font-size: 150px;
+          }
+        }
+      }
+      &__middle{
+        width: 212px;
+        height: 200px;
+        background-color: rgba(192,192,192,0.7);
+        opacity: 0.8;
+        border: solid 0.5px;
+
+        a{
+          display: block;
+          width: 212px;
+          height: 200px;
+        }
+      }
+
+      &__bottom{
+        width: 212px;
+        height: 200px;
+        background-color: rgba(192,192,192,0.7);
+        border: solid 0.5px;
+
+        a{
+          display: block;
+          width: 212px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .character{
+    height: 270px;
+    width: 220px;
+    background-image: url(作業員挨拶.png);
+    position: absolute;
+    top: 570px;
+    left: 1100px;
+  }
+
+  .message{
+    height: 300px;
+    width: 500px;
+    background-image: url(fukidashi.png);
+    position: absolute;
+    left: 850px;
+    top: 250px;
+    
+    &__content{
+      height: 200px;
+      width: 350px;
+      font-size: 30px;
+      line-height: 1.5;
+      margin-top: 60px;
+      margin-left: 100px;
+      font-weight: bold;
+      font-family: serif;
+    }
+  }
+}
+
+
