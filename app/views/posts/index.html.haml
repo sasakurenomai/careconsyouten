@@ -1,15 +1,31 @@
-.wrapper
-  .wrapper__message
-  -  @posts.each do |post|
-    .wrapper__message__update
-      =  post.updated_at
-    .wrapper__message__title
-      =  post.title
-    .wrapper__message__image
-      =  post.image    
-    .wrapper__message__show
-      =  link_to jenre_post_path(post.jenre_id, post.id) do
-        %p  詳 細
-  .wrapper__message__new
-    =  link_to new_jenre_post_path(@post_jenre_id) do
-      %p  新 規 投 稿
+.wrapper--a
+
+  .header__a
+    %p トイレ周辺機器 >> 投稿一覧
+  = render 'layouts/notification'
+  .main--a
+    .link--box__post
+      .link--box__jamp
+        = link_to  jenre_path(@jenre.id) do
+          %p 戻 る
+      .link--box__top
+        =  link_to new_jenre_post_path(@jenre.id) do
+          %p 新 規 投 稿
+    .link--box__index
+      - @posts.each do |post|
+        .container--a
+          .content--a
+            .tag--a
+              =  link_to jenre_post_path(@jenre.id, post.id) do
+                %p.title
+                  =  post.title
+                %p.updated
+                  =  post.updated_at.to_s(:datetime_jp)
+              .good
+                = button_to jenre_post_likes_path(@jenre.id,post.id), method: :post, id: "good_btn_#{post.id}", class: "good_btn", remote: true do
+                  %i.far.fa-thumbs-up
+                  %span#good_span
+                    = post.likes_count
+                  
+            .image--a
+              = image_tag post.images[0].to_s, class: 'image_tag'

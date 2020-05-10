@@ -1,0 +1,66 @@
+.wrapper1-1
+  .header1-1
+    %p  トイレ周辺機器
+  .main1-1
+    .link1-1
+      = link_to  jenre_path(@jenre.id) do
+        %p 戻 る
+
+    .character1-1
+    .fukidashi1-1
+    %ul.comment1-1
+      %li.top1-1 詳細については
+      %li.middle1-1 ①〜④の順に見てくれ
+      %li.bottom1-1 各番号ごとに説明するよ
+    .block-container
+      .block-container1-1-top
+        .block-container1-1-top-left
+          .image-box1-1
+            = image_tag @urinal.urinal_images[0].to_s, class: "image1-1"
+            %span.number1-1
+              ①
+          .title-box1-1
+            = simple_format @urinal.title_a, class: "title1-1"
+          .content-box1-1
+            = simple_format @urinal.content_a, class: "content1-1"
+        .block-container1-1-top-right
+          .image-box1-1
+            = image_tag @urinal.urinal_images[1].to_s, class: "image1-1"
+            %span.number1-1
+              ②
+          .title-box1-1
+            = simple_format @urinal.title_b, class: "title1-1"
+          .content-box1-1
+            = simple_format @urinal.content_b, class: "content1-1"
+      .block-container1-1-bottom
+        .block-container1-1-bottom-left
+          .image-box1-1
+            = image_tag @urinal.urinal_images[2].to_s, class: "image1-1"
+            %span.number1-1
+              ③
+          .title-box1-1
+            = simple_format @urinal.title_c, class: "title1-1"
+          .content-box1-1
+            = simple_format @urinal.content_c, class: "content1-1"
+        .block-container1-1-bottom-right
+          .image-box1-1
+            = image_tag @urinal.urinal_images[3].to_s, class: "image1-1"
+            %span.number1-1
+              ④
+          .title-box1-1
+            = simple_format @urinal.title_d, class: "title1-1"
+          .content-box1-1
+            = simple_format @urinal.content_d, class: "content1-1"
+    -if current_user.id === 1
+      .urinal-master-box        
+        = link_to new_jenre_urinal_path(@jenre.id),class: 'urinal-new' do
+          %i.fas.fa-cog
+        = link_to edit_jenre_urinal_path(@jenre.id,@urinal.id),class: 'urinal-edit' do
+          %i.fas.fa-cogs
+        = link_to jenre_urinal_path(@jenre.id,@urinal.id),class: 'urinal-destroy',method: :delete do
+          %i.fas.fa-virus-slash
+    -else 
+      .urinal-master-box-off        
+        %i.fas.fa-cog{class: 'urinal-new-off'}
+        %i.fas.fa-cogs{class: 'urinal-edit-off'}
+        %i.fas.fa-virus-slash{class: 'urinal-destroy-off'}

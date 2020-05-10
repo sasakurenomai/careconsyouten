@@ -1,35 +1,65 @@
 .wrapper
   .header
-    %p  t i t l e
+    %p ケ ア コ ン 商 店
+  = render 'layouts/notification'
   .main
-    .link
-      %p  l i n k
+    .link--box__index
+    - if user_signed_in?    
+      .log_in
+        = link_to destroy_user_session_path, method: :delete, class: 'log_out' do
+          %p あうと
+    - else
+      .log_in
+        = link_to new_user_session_path,class: 'log_in' do
+          %p いん
+      .sign_up
+        = link_to new_user_registration_path,class: 'sign_up' do
+          %p とうろく
+         
     .jenres
-      .jenres__block--left
-        .jenres__block--left__top
-          =  link_to  jenre_path(@toiret.id)  do
-            -
-        .jenres__block--left__middle
-          -#=  link_to do
-        .jenres__block--left__bottom
-          -#=  link_to do
-      .jenres__block--center
-        .jenres__block--center__top
-        .jenres__block--center__middle
-        .jenres__block--center__bottom
-      .jenres__block--right
-        .jenres__block--right__top
-        .jenres__block--right__middle
-        .jenres__block--right__bottom
-
+    - if user_signed_in?
+      .jenres-box
+        .jenres-box__block--left
+          .jenres-box__block--left__top
+            =  link_to  jenre_path(@toiret.id), class: 'toilet-link' do
+              %i.fas.fa-toilet.toilet
+          .jenres-box__block--left__middle
+            =  link_to  jenre_path(@sink.id), class: 'faucet-link' do
+              %i.fas.fa-faucet.faucet
+          .jenres-box__block--left__bottom
+            =  link_to  jenre_path(@bath.id), class: 'bath-link' do
+              %i.fas.fa-bath.bath
+        .jenres-box__block--center
+          .jenres-box__block--center__top
+            =  link_to  jenre_path(@bath.id), class: 'bulb-link' do
+              %i.far.fa-lightbulb.bulb
+          .jenres-box__block--center__middle
+            =  link_to  jenre_path(@bath.id), class: 'plug-link' do
+              %i.fas.fa-plug.plug
+          .jenres-box__block--center__bottom
+            =  link_to  jenre_path(@bath.id), class: 'door-link' do
+              %i.fas.fa-door-open.door
+        .jenres-box__block--right
+          .jenres-box__block--right__top
+            =  link_to  jenre_path(@bath.id), class: 'window-link' do
+              %i.fab.fa-windows.window
+          .jenres-box__block--right__middle
+            =link_to "#",class: 'blank1' do
+              -
+          .jenres-box__block--right__bottom
+            =link_to "#",class: 'blank2' do
+              -
     .character
     .message
       .message__content
-        いらっしゃい
-        %br
-        %br
-        見たい内容を左から
-        %br
-        %br
-        選択して入ってくれ 
-        
+        - if user_signed_in?
+          %ul.comment-a
+            %li.top いらっしゃい
+            %li.middle 見たい内容を左から
+            %li.bottom 選択して入ってくれ 
+        - else
+          %ul.comment-b
+            %li よくきたね
+            %li まずはログインか登録
+            %li を済ましてくれ
+          

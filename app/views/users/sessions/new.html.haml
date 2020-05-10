@@ -1,0 +1,24 @@
+.wrapper--a
+  .header--a
+    %p ユーザー >> ログイン
+  
+  = form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+    - flash.each do |name, message|
+      = content_tag :div, message, id: "flash_#{name}" if message.is_a?(String)
+    .field1
+      = f.label :email, class: 'email-label'
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'email-form'
+
+    .field2
+      = f.label :password, class: 'pass-label'
+      = f.password_field :password, autocomplete: "current-password", class: 'pass-form'
+
+    -if devise_mapping.rememberable?
+      .field4
+        = f.check_box :remember_me, class: 'remember-check'
+        = f.label :remember_me, class: 'remember-label'
+
+    .actions
+      = render "users/shared/links"
+      = f.submit "Log in", class: 'registration-submit'
+
