@@ -2,7 +2,7 @@
 設備機器のCareに関するConsultingをイメージしています。<br>
 これは設備機器関連情報共有アプリです。
 
-![carecon_top](./images/carecon_top.png)
+![carecon_top](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_top.png)
 
 ## Description
 一般住宅の世帯者・商店・店舗等の小規模施設の管理者向けに開発した<br>
@@ -19,6 +19,10 @@
 投稿作成・詳細・編集（情報展開）<br>
 画像投稿・プレビュー・サムネイル（投稿内容可視化）<br>
 各投稿like（優良投稿判定）
+
+![carecon_index](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_index.png)
+
+![carecon_post](https://github.com/sasakurenomai/careconsyouten/blob/master/app/assets/images/carecon_post.png)
 
 ## Features
 ジャンル別コンテンツ展開では、カテゴライズを意識した作りに<br>
