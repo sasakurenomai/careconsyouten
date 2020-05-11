@@ -51,7 +51,6 @@ group :development do
 end
 
 group :production do
-  ruby '2.6.6'
   gem 'pg'
 end
 
