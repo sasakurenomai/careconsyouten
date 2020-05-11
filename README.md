@@ -55,6 +55,6 @@ mini_magick<br>
 
 ## Install
 
-
-
-
+  
+  
+   
