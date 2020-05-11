@@ -1,17 +1,41 @@
-.wrapper
-  .wrapper__message
-    .wrapper__message__update
-      =  @post.updated_at
-    .wrapper__message__title
-      =  @post.title
-    .wrapper__message__image
-      =  @post.image    
-    .wrapper__message__content
-      = @post.content
-    .wrapper__message__edit
-      =  link_to edit_jenre_post_path(@post.jenre_id, @post.id) do
-        %p  編 集
-    .wrapper_message__destroy
-      = link_to post_path(@post.id), method: :delete do
-        %p 削 除
+.wrapper--b
+  .header__b
+    %p トイレ周辺機器 >> 投稿詳細
+  = render 'layouts/notification'
+  .link-box
+    .message1
+      = link_to jenre_posts_path(@jenre.id) do
+        %p 投 稿
   
+  .wrapper__message--b
+    .wrapper__message--b__update--b
+      %p.updated 更 新 日 時
+      %br
+      =  @post.updated_at.to_s(:datetime_jp)
+    .wrapper__message--b__title--b
+      %p.title タ イ ト ル
+      %br
+      =  @post.title
+    .wrapper__message--b__content--b
+      %p.content 内      容
+      %br
+      = simple_format @post.content, class: 'format'
+    .wrapper__message--b__image--b
+      %p.image 写      真
+      %br
+      .image--box
+        =  image_tag @post.images[0].to_s, class: 'image_tag_show'
+      .image--box
+        =  image_tag @post.images[1].to_s, class: 'image_tag_show'
+      .image--box
+        =  image_tag @post.images[2].to_s, class: 'image_tag_show'
+      .image--box
+        =  image_tag @post.images[3].to_s, class: 'image_tag_show'
+    
+  .wrapper__message--b__edit--b
+    =  link_to edit_jenre_post_path(@jenre.id, @post.id) do
+      %p.edit  編      集
+  .wrapper__message--b__destroy--b
+    = link_to jenre_post_path(@jenre.id,@post.id), method: :delete do
+      %p.destroy 削       除
+    

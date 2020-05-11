@@ -1,0 +1,189 @@
+.field1{
+  height: 200px;
+  width: 600px;
+  background-color: gray;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+
+  .email-label{
+    display: inline-block;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: serif;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .email-form{
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
+
+.field2{
+  height: 200px;
+  width: 600px;
+  background-color: gray;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-top: none;
+  .pass-label{
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+  }
+
+  .pass-caution{ 
+    height: 50px;
+    width: 300px;
+    font-size: 20px;  
+    font-family: serif;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pass-form{
+    margin: 0 auto;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+}
+
+.field3{
+  height: 200px;
+  width: 600px;
+  background-color: gray;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+  border-top: none;
+  .confirm-label{
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: serif;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .confirm-form{
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+}
+.actions{
+  height: 100px;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  a{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 30px;
+    width: 200px;
+    font-size: 25px;
+    background-color: greenyellow;
+    color: black;
+    font-family: serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .registration-submit{
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+    height: 50px;
+    width: 300px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: serif;
+    -webkit-appearance: none;
+    background-color: yellow;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+}
+
+
+.field4{
+  height: 35px;
+  width: 200px;
+  background-color: skyblue;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+
+  .remember-check{
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right:10px;
+    transform: scale(2.0);
+    cursor: pointer;
+
+  }
+  .remember-label{
+    display: inline-block;
+    padding-left: 0px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+#error_explanation{
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: pink;
+  color: red;
+  border: 1px solid red;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+#flash_alert{
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: pink;
+  color: red;
+  border: 1px solid red;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: serif;
+
+}

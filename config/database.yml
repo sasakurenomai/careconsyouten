@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: naosu_production
-  username: naosu
-  password: <%= ENV['NAOSU_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

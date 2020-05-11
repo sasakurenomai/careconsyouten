@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200325054805) do
+ActiveRecord::Schema.define(version: 20200505055514) do
 
   create_table "jenres", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "subject",    limit: 65535, null: false
@@ -18,15 +18,59 @@ ActiveRecord::Schema.define(version: 20200325054805) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "title",      limit: 65535, null: false
-    t.text     "content",    limit: 65535, null: false
-    t.text     "image",      limit: 65535
-    t.integer  "jenre_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.index ["jenre_id"], name: "index_posts_on_jenre_id", using: :btree
+  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_likes_on_post_id", using: :btree
+    t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "title",       limit: 65535, null: false
+    t.text     "content",     limit: 65535, null: false
+    t.string   "images"
+    t.integer  "jenre_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "user_id"
+    t.integer  "likes_count"
+    t.index ["jenre_id"], name: "index_posts_on_jenre_id", using: :btree
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "urinals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "title_a",       limit: 65535, null: false
+    t.text     "title_b",       limit: 65535
+    t.text     "title_c",       limit: 65535
+    t.text     "title_d",       limit: 65535
+    t.text     "content_a",     limit: 65535, null: false
+    t.text     "content_b",     limit: 65535
+    t.text     "content_c",     limit: 65535
+    t.text     "content_d",     limit: 65535
+    t.integer  "jenre_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "urinal_images"
+    t.index ["jenre_id"], name: "index_urinals_on_jenre_id", using: :btree
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  add_foreign_key "likes", "posts"
+  add_foreign_key "likes", "users"
   add_foreign_key "posts", "jenres"
+  add_foreign_key "posts", "users"
+  add_foreign_key "urinals", "jenres"
 end

@@ -1,0 +1,90 @@
+.wrapper1
+  .header1
+    %p  トイレ周辺機器
+  .main1
+    .message1
+      =  link_to jenre_posts_path(@jenre) do
+        %p 投 稿 
+    .link1
+      = link_to  jenres_path do
+        %p 戻 る
+    .out-link
+      = link_to 'https://www.com-et.com/jp/item_search/searchStr=TKGG31E/', class: 'toto-link' do
+        = image_tag "TOTOロゴ.png", class: 'out-image'
+      = link_to 'https://iinavi.inax.lixil.co.jp/service/parts/', class: 'lixil-link' do
+        = image_tag "LIXILロゴ.png", class: 'out-image'
+      = link_to 'https://kakudai.jp/maint/suisen/', class: 'kakudai-link' do
+        = image_tag "カクダイロゴ2.png", class: 'out-image'
+      %br  
+      = link_to 'https://www.sanei.ltd/products/', class: 'sanei-link' do
+        = image_tag "SANEIロゴ.png", class: 'out-image'
+    .character2
+    .fukidashi2
+    %ul.comment1
+      %li.top2 探しているものを
+      %li.middle2 下の写真から選んでくれ
+      %li.bottom2 軽く説明しよう
+  
+    .urinal
+      .urinal__block--left
+        .urinal__block--left__top
+          =  link_to jenre_urinal_path(@jenre, @low_tank.id), class: 'low_tank' do
+            -
+        .urinal__block--left__middle
+          =  link_to jenre_urinal_path(@jenre, @high_tank.id), class: 'high_tank' do
+            -
+        .urinal__block--left__bottom
+          =  link_to jenre_urinal_path(@jenre, @one_piece.id), class: 'one_piece' do
+            -
+      .urinal__block--center
+        .urinal__block--center__top
+          =  link_to jenre_urinal_path(@jenre, @low_silhouette.id), class: 'low_silhouette' do
+            -
+        .urinal__block--center__middle
+          =  link_to jenre_urinal_path(@jenre, @high_silhouette.id), class: 'high_silhouette' do
+            -
+        .urinal__block--center__bottom
+          =  link_to jenre_urinal_path(@jenre, @hanger_piss.id), class: 'hanger_piss' do
+            -
+      .urinal__block--right
+        .urinal__block--right__top
+          =  link_to jenre_urinal_path(@jenre, @stall_piss.id), class: 'stall_piss' do
+            -
+        .urinal__block--right__middle
+          =  link_to jenre_urinal_path(@jenre, @fv_piss.id), class: 'fv_piss' do
+            -
+        .urinal__block--right__bottom
+          =  link_to jenre_urinal_path(@jenre, @auto_piss.id), class: 'auto_piss' do
+            -
+    .urinal2
+      .urinal2__block--left
+        .urinal2__block--left__top
+          =  link_to jenre_urinal_path(@jenre, @washlet.id), class: 'washlet' do
+            -
+        .urinal2__block--left__middle
+          =  link_to jenre_urinal_path(@jenre, @washlet_remote.id), class: 'washlet_remote' do
+            -
+        .urinal2__block--left__bottom
+          =  link_to jenre_urinal_path(@jenre, @lever_handle.id), class: 'lever_handle' do
+            -
+      .urinal2__block--center
+        .urinal2__block--center__top
+          =  link_to jenre_urinal_path(@jenre, @water_pipe.id), class: 'water_pipe' do
+            -
+        .urinal2__block--center__middle
+          =  link_to jenre_urinal_path(@jenre, @wash_pipe.id), class: 'wash_pipe' do
+            -
+        .urinal2__block--center__bottom
+          =  link_to jenre_urinal_path(@jenre, @spud.id), class: 'spud' do
+            -
+      .urinal2__block--right
+        .urinal2__block--right__top
+          =  link_to jenre_urinal_path(@jenre, @ball_tap.id), class: 'ball_tap' do
+            -
+        .urinal2__block--right__middle
+          =  link_to jenre_urinal_path(@jenre, @float_valve.id), class: 'float_valve' do
+            -
+        .urinal2__block--right__bottom
+          =  link_to jenre_urinal_path(@jenre, @fv_stool.id), class: 'fv_stool' do
+            -
+    

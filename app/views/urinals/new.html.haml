@@ -1,0 +1,39 @@
+.wrapper--a{style: "height: 1000px;"}
+  .header--a{style: "background-color: gray;"}
+    %p{style: "color: yellow;"} 管理者操作 >> 新規追加
+  .form__box{style: "min-width: 100%;",style: "height: 1200px;"}
+    %ul.form_for
+      = form_for [@jenre,@urinal] do |f|
+        %li.form_title
+          =  f.text_area :title_a, placeholder: '題  目  a'
+          =  f.text_area :title_b, placeholder: '題  目  b'
+          =  f.text_area :title_c, placeholder: '題  目  c'
+          =  f.text_area :title_d, placeholder: '題  目  d'
+        %li.form_content{style: "margin-bottom: 0px;"}
+          =  f.text_area :content_a, placeholder: '内  容  a'
+          =  f.text_area :content_b, placeholder: '内  容  b'
+          =  f.text_area :content_c, placeholder: '内  容  c'
+          =  f.text_area :content_d, placeholder: '内  容  d'
+        %li.form_image  
+          .post-images-box1-top
+            .post-images-box1-top-left
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images1'
+              .box
+                =  image_tag "", id: 'img1'
+            .post-images-box1-top-right
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images2'
+              .box
+                = image_tag "", id: 'img2'
+          .post-images-box1-bottom
+            .post-images-box1-bottom-left
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images3'
+              .box
+                = image_tag "", id: 'img3'
+            .post-images-box1-bottom-right
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images4'
+              .box
+                = image_tag "", id: 'img4'
+          
+        %li.form_submit
+          =  f.submit '送  信', class: 'submit'
+          

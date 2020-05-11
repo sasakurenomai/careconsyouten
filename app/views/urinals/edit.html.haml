@@ -1,0 +1,49 @@
+.wrapper--a{style: "background-color: black;"}
+  .header--a{style: "background-color: gray;"}
+    %p{style: "color: yellow;"} 管理者操作 >> 既存編集
+  .form__box{style: "min-width: 100%;"}
+    %ul.form_for
+      = form_for [@jenre,@urinal] do |f|
+        %li.form_title
+          =  f.text_area :title_a, placeholder: '題  目  a'
+          =  f.text_area :title_b, placeholder: '題  目  b'
+          =  f.text_area :title_c, placeholder: '題  目  c'
+          =  f.text_area :title_d, placeholder: '題  目  d'
+        %li.form_content
+          =  f.text_area :content_a, placeholder: '内  容  a'
+          =  f.text_area :content_b, placeholder: '内  容  b'
+          =  f.text_area :content_c, placeholder: '内  容  c'
+          =  f.text_area :content_d, placeholder: '内  容  d'
+        %li.form_image
+          %p.image-title
+            写 真
+
+          .post-images-box1-top
+            .post-images-box1-top-left
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images1'
+              =  f.hidden_field :urinal_images_cache
+              .box
+                = image_tag @urinal.urinal_images[0].to_s, id: 'img1'
+            .post-images-box1-top-right
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images2'
+              =  f.hidden_field :urinal_images_cache
+              .box
+                = image_tag @urinal.urinal_images[1].to_s, id: 'img2'
+          .post-images-box1-bottom
+            .post-images-box1-bottom-left
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images3'
+              =  f.hidden_field :urinal_images_cache
+              .box
+                = image_tag @urinal.urinal_images[2].to_s, id: 'img3'
+            .post-images-box1-bottom-right
+              =  f.file_field :urinal_images, multiple: true, id: 'post_images4'
+              =  f.hidden_field :urinal_images_cache
+              .box
+                = image_tag @urinal.urinal_images[3].to_s, id: 'img4'
+          .remove-checkbox
+            %p 画 像 一 括 削 除
+            =  f.check_box :remove_urinal_images, class: 'remove_checkbox'
+          
+        %li.form_submit
+          =  f.submit '送  信', class: 'submit'
+          

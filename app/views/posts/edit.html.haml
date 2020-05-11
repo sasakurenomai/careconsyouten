@@ -1,7 +1,69 @@
-.wrapper
-  .form
-    =  form_for [@jenre,@post] do |f|
-      =  f.text_area :title, placeholder: '題 目'
-      =  f.text_area :content,placeholder: '内 容'
-      =  f.text_area :image, placeholder: '写 真'
-      =  f.submit '送 信'
+.wrapper--a
+  .header--a
+    %p トイレ周辺機器 >> 投稿編集
+  = render 'layouts/post_error_messages'
+  .link-box
+    .link1
+      = link_to  jenre_post_path(@jenre.id, @post.id) do
+        %p 詳 細
+    .message1
+      =  link_to jenre_posts_path(@jenre.id) do
+        %p 投 稿
+  -#-if @result >= 1
+    -#.error
+      一 度 写 真 の 一 括 削 除 を お 願 い し ま す
+  
+  .form__box
+    %ul.form_for
+      = form_for [@jenre,@post] do |f|
+        %li.form_title
+          %p.title-caution
+            10文字以内で入力してください
+          =  f.text_area :title, placeholder: '題  目'
+        %li.form_content
+          %p.content-caution
+            300文字以内で入力してください
+          =  f.text_area :content, placeholder: '内  容'
+        %li.form_image
+          %p.image-title
+            写 真
+          -#%p.image-caution1
+            ※写真の取り下げはできません。
+          -#%p.image-caution2
+            取り下げする場合は一度リロードして下さい。
+            -#%br
+            内容に記載をしている場合、再度入力する手間を
+            -#%br
+            省くために文章をコピーしてからのリロードを
+            -#%br
+            お勧めします。
+
+          .post-images-box1-top
+            .post-images-box1-top-left
+              =  f.file_field :images, multiple: true, id: 'post_images1'
+              =  f.hidden_field :images_cache
+              .box
+                = image_tag @post.images[0].to_s, id: 'img1'
+            .post-images-box1-top-right
+              =  f.file_field :images, multiple: true, id: 'post_images2'
+              =  f.hidden_field :images_cache
+              .box
+                = image_tag @post.images[1].to_s, id: 'img2'
+          .post-images-box1-bottom
+            .post-images-box1-bottom-left
+              =  f.file_field :images, multiple: true, id: 'post_images3'
+              =  f.hidden_field :images_cache
+              .box
+                = image_tag @post.images[2].to_s, id: 'img3'
+            .post-images-box1-bottom-right
+              =  f.file_field :images, multiple: true, id: 'post_images4'
+              =  f.hidden_field :images_cache
+              .box
+                = image_tag @post.images[3].to_s, id: 'img4'
+          .remove-checkbox
+            %p 既 存 画 像 一 括 削 除
+            =  f.check_box :remove_images, class: 'remove_checkbox'
+          
+        %li.form_submit
+          =  f.submit '送  信', class: 'submit'
+          

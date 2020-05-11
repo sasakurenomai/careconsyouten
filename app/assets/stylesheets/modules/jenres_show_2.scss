@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper2{
+  height: 100vh;
+}
+
+.header2{
+  height: 100px;
+  width: 100vw;
+  background-color: blue;
+	background-size: 10px 10px;
+	background-image:
+	linear-gradient(45deg,  black 25%, gray 25%, transparent 25%,
+  transparent 75%, gray 75%, black 75%),
+	linear-gradient(-45deg, black 25%, gray 25%, transparent 25%,
+	transparent 75%, gray 75%, black 75%);
+
+  p{
+    height: 100px;
+    width: 600px;
+    color: white;
+    margin: 0 auto;
+    font-size: 95px;
+    text-align: center;
+    font-family: serif;
+  }
+}
+
+.main2{
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background-image: url(sink-show.png) ;
+  display: flex;
+  flex-flow: row-reverse;
+
+
+  .link2{
+    height: 100px;
+    width: 200px;
+    margin: 0;
+    background-color: rgba($color: #000099, $alpha: 0.5);
+    position: relative;
+    
+    p{
+      height: 80px;
+      width: 150px;
+      font-size: 50px;
+      font-family: serif;
+      text-align: center;
+      line-height: normal;
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      color: white;
+    }
+  }
+}
+
+.message2{
+  height:100px;
+  width:200px;
+  background-color: rgba($color: #008080, $alpha: 0.5);
+  margin-top: 0px; 
+  margin-left: 0px;
+  position: relative;
+  
+  
+  
+    p{
+      font-family: serif;
+      font-size: 50px;
+      line-height: normal;
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      font-size: 45px;
+      height: 80px;
+      width: 150px;
+      margin: 0 auto;
+    }
+  
+}
