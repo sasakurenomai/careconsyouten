@@ -8,6 +8,20 @@
 
 # coding: utf-8
 
-Jenre.create(subject: 'toiret')
-Jenre.create(subject: 'sink')
-Jenre.create(subject: 'wash')
+Jenre.create([
+  {subject: 'toiret'},
+  {subject: 'sink'},
+  {subject: 'wash'}
+])
+
+
+18.times do |n|
+  Urinal.create(
+    title_a: 'a',
+    content_a: 'a',
+    jenre_id: 1,
+  )
+end
+
+
+#urinal_images: [open("./public/images.jpeg")]
