@@ -68,3 +68,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'jquery-rails'
+
+source 'https://rubygems.org'
+ruby '2.5.8'
