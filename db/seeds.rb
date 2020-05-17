@@ -19,7 +19,7 @@ Jenre.create([
   Urinal.create(
     title_a: 'a',
     content_a: 'a',
-    jenre_id: 1,
+    jenre_id: 1
   )
 end
 
