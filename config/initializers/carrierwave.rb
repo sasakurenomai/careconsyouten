@@ -11,7 +11,7 @@ if Rails.env.production?
 
       provider: 'AWS',
       region: 'ap-northeast-1',
-      aws_access_key_id: ENV['S3_ACCESS_KEY'] #Rails.application.secrets.aws_access_key_id,
+      aws_access_key_id: ENV['S3_ACCESS_KEY'], #Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: ENV['S3_SECRET_KEY'] #Rails.application.secrets.aws_secrets_access_key
     }
     config.fog_directory = 'sasakure02'
