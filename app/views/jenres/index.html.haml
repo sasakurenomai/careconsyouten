@@ -4,17 +4,17 @@
   = render 'layouts/notification'
   .main
     .link--box__index
-    - if user_signed_in?    
-      .log_in
-        = link_to destroy_user_session_path, method: :delete, class: 'log_out' do
-          %p あうと
-    - else
-      .log_in
-        = link_to new_user_session_path,class: 'log_in' do
-          %p いん
-      .sign_up
-        = link_to new_user_registration_path,class: 'sign_up' do
-          %p とうろく
+      - if user_signed_in?    
+        .log_out
+          = link_to destroy_user_session_path, method: :delete, class: 'log_out' do
+            %p あうと
+      - else
+        .log_in
+          = link_to new_user_session_path,class: 'log_in' do
+            %p いん
+        .sign_up
+          = link_to new_user_registration_path,class: 'sign_up' do
+            %p とうろく
          
     .jenres
     - if user_signed_in?
