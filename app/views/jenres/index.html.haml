@@ -7,14 +7,14 @@
       - if user_signed_in?    
         .log_out
           = link_to destroy_user_session_path, method: :delete, class: 'log_out' do
-            %p あうと
+            %p 退 出
       - else
         .log_in
           = link_to new_user_session_path,class: 'log_in' do
-            %p いん
+            %p 入 室
         .sign_up
           = link_to new_user_registration_path,class: 'sign_up' do
-            %p とうろく
+            %p 登 録
          
     .jenres
     - if user_signed_in?
