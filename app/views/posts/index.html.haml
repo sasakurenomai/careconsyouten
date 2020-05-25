@@ -29,3 +29,4 @@
                   
             .image--a
               = image_tag post.images[0].to_s, class: 'image_tag'
+  = paginate @posts

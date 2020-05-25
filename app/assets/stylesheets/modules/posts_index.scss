@@ -195,3 +195,57 @@
   }
 }
 
+.pagination{
+  position: absolute;
+  top: 1350px;
+  left: 20px;
+  margin-bottom: 100px;
+  font-size: 25px;
+  color: yellow;
+  height: 50px;
+  width: 350px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 2.0; 
+
+  span.page.current{
+    margin-right: 10px;
+    font-family: serif;
+    background-color: blue;
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 1.5;
+  }
+
+  span.first{
+    display: none;
+  }
+
+  span.prev{
+    display: none;
+  }
+  
+  a{
+    color: yellow;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: serif;
+    background-color: red;
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 1.5; 
+  }
+
+ 
+  }
+
+  

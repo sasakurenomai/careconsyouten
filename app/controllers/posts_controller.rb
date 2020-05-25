@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show, :destroy, :update]
 
   def index
-    @posts = @jenre.posts.all #記事全取得/展開用
+    @posts = @jenre.posts.all.order("updated_at DESC").page(params[:page]).per(12) #記事全取得/展開用
   end
 
   def new
