@@ -54,6 +54,7 @@ SQL<br>
 devise<br>
 carrierwave<br>
 mini_magick<br>
+kaminari
 
 ## Install
 
